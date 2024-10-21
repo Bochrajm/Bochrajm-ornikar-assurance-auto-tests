@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '18'  # Use LTS version for stability
 
       - name: Install dependencies
         run: npm install
@@ -26,13 +26,16 @@ jobs:
       - name: Run Cypress tests
         run: npm run test
 
+      - name: List reports directory
+        run: ls -la reports/html
+
       # Deploy to GitHub Pages on push to main branch
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: reports/html/.jsons
+          publish_dir: reports/html
           publish_branch: gh-pages
           dest_dir: reports/main
           keep_files: true
@@ -43,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: report
-          path: reports/html/.jsons/mochawesome.json
+          path: reports/html/**
