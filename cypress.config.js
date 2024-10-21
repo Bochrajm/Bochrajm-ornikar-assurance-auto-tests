@@ -21,6 +21,14 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.feature',
     baseUrl: 'https://www.ornikar.com/assurance-auto',
     chromeWebSecurity: false,
-    modifyObstructiveCode: false
+    modifyObstructiveCode: false,
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      charts: true,
+      reportPageTitle: 'Cypress Cucumber Test Results',
+      embeddedScreenshots: true,
+      inlineAssets: true,
+      saveAllAttempts: false,
+    },
   },
 });

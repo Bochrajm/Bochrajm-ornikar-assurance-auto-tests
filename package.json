@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "merge-reports": "mochawesome-merge cypress/results/*.json > cypress/results/output.json",
+    "generate-html-report": "marge cypress/results/output.json -f report -o cypress/results"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,10 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.2",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
-    "cypress": "^13.15.0"
+    "cypress": "^13.15.0",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
