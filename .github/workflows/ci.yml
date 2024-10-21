@@ -27,7 +27,7 @@ jobs:
         run: npm run test
 
       # Upload test report as artifact on pull requests
-      - name: Upload PR Report
+      - name: Upload Report
         uses: actions/upload-artifact@v3
         with:
           name: report
