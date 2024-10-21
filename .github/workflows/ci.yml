@@ -25,3 +25,22 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run test
+
+      # Deploy to GitHub Pages on push to main branch
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: reports/html
+          publish_branch: gh-pages
+          dest_dir: reports/main
+          keep_files: true
+
+      # Upload test report as artifact on pull requests
+      - name: Upload PR Report
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v3
+        with:
+          name: report
+          path: reports/html/**
