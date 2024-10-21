@@ -1,4 +1,3 @@
-// cypress.config.js
 const { defineConfig } = require('cypress');
 const createBundler = require('@bahmutov/cypress-esbuild-preprocessor');
 const preprocessor = require('@badeball/cypress-cucumber-preprocessor');
@@ -18,13 +17,13 @@ module.exports = defineConfig({
 
       return config;
     },
-    specPattern: 'cypress/e2e/**/*.feature',
+    specPattern: 'cypress/e2e/frontend/**/*.feature',
     baseUrl: 'https://www.ornikar.com/assurance-auto',
     chromeWebSecurity: false,
     modifyObstructiveCode: false,
     reporter: "mochawesome",
     reporterOptions: {
-      "reportDir": "reports/html",
+      "reportDir": "reports/frontend",
       "overwrite": true,
       "html": true,
       "json": false
