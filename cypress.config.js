@@ -22,5 +22,6 @@ module.exports = defineConfig({
     baseUrl: 'https://www.ornikar.com/assurance-auto',
     chromeWebSecurity: false,
     modifyObstructiveCode: false,
+    experimentalStudio: true
   },
 });
