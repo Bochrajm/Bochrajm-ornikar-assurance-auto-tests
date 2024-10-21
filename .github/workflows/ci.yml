@@ -26,9 +26,6 @@ jobs:
       - name: Run Cypress tests
         run: npm run test
 
-      - name: List reports directory
-        run: ls -la reports/html
-
       # Deploy to GitHub Pages on push to main branch
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
