@@ -21,7 +21,6 @@ module.exports = defineConfig({
     specPattern: 'cypress/e2e/**/*.feature',
     baseUrl: 'https://www.ornikar.com/assurance-auto',
     chromeWebSecurity: false,
-    modifyObstructiveCode: false,
-    experimentalStudio: true
+    modifyObstructiveCode: false
   },
 });
