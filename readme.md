@@ -17,19 +17,20 @@ npm install
 npm run test:frontend  # Tests front
 npm run test:backend   # Tests API
 ```
+## CI
+- Chaque commit permettra de lancer une CI de validation.
+![image](https://github.com/user-attachments/assets/f8397fc0-2356-4567-b358-8df124111895)
+
 
 ## Génération des rapports
 Les résultats des tests sont disponibles dans deux répertoires distincts :
 
 - 'reports/frontend' : rapports des tests front
 - 'reports/backend' : rapports des tests d'API
+  
+- Les rapports sont archivés dans la vue summary de chaque workflow dans la rubrique #Actions  
+![image](https://github.com/user-attachments/assets/0356361e-b4f5-4f9a-9ea4-208817386664)
 
-## CI
-- Chaque commit permettra de lancer une CI de validation.
-![image](https://github.com/user-attachments/assets/f8397fc0-2356-4567-b358-8df124111895)
-
-- Les rapports sont stockés dans la vue summary de chaque workflow dans la rubrique #Actions  
-![image](https://github.com/user-attachments/assets/4921ecc1-eaa4-4b9e-a339-a40ac73e70d4)
 
 Ex: https://github.com/Bochrajm/Bochrajm-ornikar-assurance-auto-tests/actions/runs/11465655472
 
