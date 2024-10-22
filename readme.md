@@ -28,7 +28,7 @@ Les résultats des tests sont disponibles dans deux répertoires distincts :
 - 'reports/frontend' : rapports des tests front
 - 'reports/backend' : rapports des tests d'API
   
-- Les rapports sont archivés dans la vue summary de chaque workflow dans la rubrique #Actions  
+- Les rapports sont archivés dans la vue summary de chaque build dans la rubrique #Actions  
 ![image](https://github.com/user-attachments/assets/0356361e-b4f5-4f9a-9ea4-208817386664)
 
 
