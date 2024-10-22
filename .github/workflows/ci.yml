@@ -8,8 +8,9 @@ on:
     branches: [main]
 
 jobs:
-  cypress-run:
+  cypress-backend:
     runs-on: ubuntu-latest
+    name: Backend Tests
 
     steps:
       - name: Checkout code
@@ -23,12 +24,38 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Cypress tests
-        run: npm run test
+      - name: Run Backend Tests
+        run: npm run test:backend
 
-      # Upload test report as artifact on pull requests
-      - name: Upload Report
+      - name: Upload Backend Report
         uses: actions/upload-artifact@v3
         with:
-          name: report
-          path: reports/html/**
+          name: backend-report
+          path: reports/backend/**
+          if-no-files-found: error
+
+  cypress-frontend:
+    runs-on: ubuntu-latest
+    name: Frontend Tests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Frontend Tests
+        run: npm run test:frontend
+
+      - name: Upload Frontend Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: frontend-report
+          path: reports/frontend/**
+          if-no-files-found: error
