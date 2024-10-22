@@ -24,6 +24,15 @@ Les résultats des tests sont disponibles dans deux répertoires distincts :
 - 'reports/frontend' : rapports des tests front
 - 'reports/backend' : rapports des tests d'API
 
+## CI
+- Chaque commit permettra de lancer une CI de validation.
+![image](https://github.com/user-attachments/assets/f8397fc0-2356-4567-b358-8df124111895)
+
+- Les rapports sont stockés dans la vue summary de chaque workflow dans la rubrique #Actions  
+![image](https://github.com/user-attachments/assets/4921ecc1-eaa4-4b9e-a339-a40ac73e70d4)
+
+Ex: https://github.com/Bochrajm/Bochrajm-ornikar-assurance-auto-tests/actions/runs/11465655472
+
 # Analyse du Site d'Assurance Ornikar
 
 ## Partie I - la UI
@@ -35,10 +44,10 @@ Pour la partie qui nous intéresse, Le site permet également de gérer son assu
 ### 2. Stratégie de Test
 
 #### Priorités d'automatisation :
-1. Parcours de génération des devis - La conversion des visiteurs en clients commence ici
-2. Processus de souscription - L'étape cruciale de transformation
+1. Parcours de génération des devis - La conversion des visiteurs en clients commence ici.
+2. Processus de souscription - L'étape cruciale de transformation.
 3. Les navigations - s'assurer que la page d'accueil se charge correctement et que les différents contrôles de navigations marchent aussi.
-4. Validation des formulaires - s'assurer que les données renseignées par les utilisateurs sont cohérentes
+4. Validation des formulaires - s'assurer que les données renseignées par les utilisateurs sont cohérentes.
 #### Points clés avec les 3-amigos :
 * Profils utilisateurs variés (novice, expérimenté...)
 * Workflows différents au niveau des formulaires de devis (Nouvel achat, nouveau contrat, résiliation etc..)
